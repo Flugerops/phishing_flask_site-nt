@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Payment Error</h1>
+    <p>{{ error }}</p>
+    <a href="{{url_for('donate_get')}}">Back to payment</a>
+{% endblock %}

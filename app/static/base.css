@@ -1,0 +1,86 @@
+body {
+    background-image: url('https://media1.tenor.com/m/2WEdoL4ppm4AAAAC/falling-pennies.gif'); 
+    background-repeat: repeat;
+    background-position: center; 
+    background-size: contain; 
+    animation: background 10s ease infinite; 
+  }
+  
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bbb;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  button {
+    background-color: #00FF00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #00C800;
+    transform: scale(1.1);
+  }
+  
+  .expiration-date-fields {
+    display: flex;
+    align-items: center;
+  }
+  
+  .expiration-date-fields input {
+    width: 50;
+    margin-right: 50px;
+  }
+  h1, label {
+    animation: neon 1.5s ease infinite alternate;
+  }
+  
+  @keyframes neon {
+    from { text-shadow: 0 0 0 rgba(255,255,255,0.4); }
+    to { text-shadow: 0 0 5px rgba(255,255,255,0.8); }
+  }
+  
+  /* Input field focus effect */
+  input[type="text"],
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #00FF00;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
