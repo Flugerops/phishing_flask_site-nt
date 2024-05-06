@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif');
+    background-size: cover;
+    background-position: center;
+}

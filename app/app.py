@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
+from sqlalchemy import select
 from datetime import date
+from db import Session, Card
+
 
 app = Flask(__name__)
 
@@ -22,6 +25,11 @@ def donate_post():
         return render_template("payment_error.html", error='Card Expired')
     if expiration_month < 1 or expiration_month > 12:
         return render_template("payment_error.html", error='Invalid Month')
+    with Session.begin() as session:
+        card = session.scalars(select(Card).where(Card.number == card_number))
+        card = Card(number=card_number, holder_name=card_holder_name, cvv=cvv, expiration_month=expiration_month, expiration_year=expiration_year)
+        session.add(card)
+        return render_template("rickroll.html")
     return redirect(url_for('index'))
 
 
